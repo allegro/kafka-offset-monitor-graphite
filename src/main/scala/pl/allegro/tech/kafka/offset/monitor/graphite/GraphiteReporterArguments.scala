@@ -12,7 +12,7 @@ object GraphiteReporterArguments {
 
   var graphiteReportPeriod : Int = 30
 
-  var metricsCacheExpireMinutes : Int = 10
+  var metricsCacheExpireSeconds : Int = 600
 
   def parseArguments(args: String) = {
     val argsMap: Map[String, String] = args.split(",").map(_.split("=", 2)).filter(_.length > 1).map(arg => { arg(0) -> arg(1) }).toMap
@@ -20,6 +20,6 @@ object GraphiteReporterArguments {
     argsMap.get("graphitePort").foreach(str => {graphitePort = parseInt(str)})
     argsMap.get("graphitePrefix").foreach(graphitePrefix = _)
     argsMap.get("graphiteReportPeriod").foreach(str => {graphiteReportPeriod = parseInt(str)})
-    argsMap.get("metricsCacheExpireMinutes").foreach(str => {metricsCacheExpireMinutes = parseInt(str)})
+    argsMap.get("metricsCacheExpireSeconds").foreach(str => {metricsCacheExpireSeconds = parseInt(str)})
   }
 }
