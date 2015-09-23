@@ -23,7 +23,7 @@ object KafkaUtilsBuild extends Build {
     libraryDependencies ++= Seq(
       "com.google.guava" % "guava" % "18.0",
       "com.quantifind" % "kafkaoffsetmonitor_2.10" % "0.3.0-SNAPSHOT",
-      "io.dropwizard.metrics" % "metrics-graphite" % "3.1.0",
+      "io.dropwizard.metrics" % "metrics-graphite" % "3.1.2",
 
       "org.scalatest" % "scalatest_2.10" % "2.2.4" % "test",
       "com.jayway.awaitility" % "awaitility" % "1.6.1" % "test"
